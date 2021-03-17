@@ -328,5 +328,6 @@ class _MyHomePageState extends State<MyHomePage> {
       showNum = "";
       stat = 0;
     }
+    int i = 0;
   }
 }
