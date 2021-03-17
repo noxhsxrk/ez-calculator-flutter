@@ -4,7 +4,7 @@ A calculator using Flutter project
 not full-fuctional
 amateur
 
-## Getting Started
+## Disclaimer
 
 This project is for educational purpose only.
 
