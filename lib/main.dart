@@ -84,11 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "1";
                     });
@@ -99,11 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "2";
                     });
@@ -114,11 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "3";
                     });
@@ -130,11 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     num1 = showNum;
                     setState(() {
                       showNum += " + ";
@@ -151,11 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "4";
                     });
@@ -166,11 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "5";
                     });
@@ -181,11 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "6";
                     });
@@ -197,13 +169,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
+                    check();
                     num1 = showNum;
                     setState(() {
-                      if (stat == 1) {
-                        showNum = "";
-                        result = "";
-                        stat = 0;
-                      }
                       showNum += " - ";
                     });
                   },
@@ -218,11 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "7";
                     });
@@ -233,11 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "8";
                     });
@@ -248,11 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     setState(() {
                       showNum += "9";
                     });
@@ -265,11 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     minimumSize: MaterialStateProperty.all(Size(100, 50)),
                   ),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     num1 = showNum;
                     setState(() {
                       showNum += " * ";
@@ -293,11 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      result = "";
-                      stat = 0;
-                    }
+                    check();
                     if (showNum == "") {
                     } else if (findOps(showNum) > 0 &&
                         showNum[findOps(showNum) + 2] == new RegExp('r[0-9]')) {
@@ -321,10 +269,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: ButtonStyle(
                       minimumSize: MaterialStateProperty.all(Size(100, 50))),
                   onPressed: () {
-                    if (stat == 1) {
-                      showNum = "";
-                      stat = 0;
-                    }
+                    check();
                     num1 = showNum;
                     setState(() {
                       showNum += " / ";
@@ -355,11 +300,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return str.indexOf(new RegExp(r'[!@#$%^&*(),.?":{}|<>+-/]'));
   }
 
-  void cal() {
-    if (stat == 1) {
-      showNum = "";
-      stat = 0;
-    }
+  cal() {
+    check();
     stat = 1;
     num2 = showNum.trim().substring(findOps(showNum) + 1, showNum.length);
     numOne = int.parse(num1);
@@ -379,5 +321,12 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     history = showNum;
     showNum = "";
+  }
+
+  check() {
+    if (stat == 1) {
+      showNum = "";
+      stat = 0;
+    }
   }
 }
